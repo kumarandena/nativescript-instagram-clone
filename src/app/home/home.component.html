@@ -1,0 +1,254 @@
+<GridLayout rows="auto, * ,50" class="page">
+
+        <GridLayout *ngIf="selectedRoute == 'home' || selectedRoute == 'profile' ? true : false" row="0"
+                borderBottomWidth="0.5" borderBottomColor="#b2b2b2">
+                <GridLayout *ngIf="selectedRoute == 'home' ? true : false" marginTop="5" marginBottom="5" columns="10, auto, auto, *, auto, auto, 10">
+                        <Label col="1" text="&#xf030;" class="fa android-lbl" marginright="8" verticalalignment="center"
+                                fontsize="25"></Label>
+                        <Image col="2" height="40" src="~/assets/title.png" stretch="aspectFill"></Image>
+                        <Image col="4" width="30" height="30" src="~/assets/icon.png" stretch="aspectFill" marginright="15"></Image>
+                        <Label col="5" text="&#xf1d9;" class="fa android-lbl" verticalalignment="center" fontsize="25"></Label>
+                        <Label col="5" text="2" borderRadius="100%" width="20" height="20" style="background: white; border-width: 1; border-color: #2E93F0; color: #2E93F0; margin-left:15;"
+                                verticalAlignment="top" horizontalAlignment="right" textAlignment="center"></Label>
+                </GridLayout>
+                <GridLayout *ngIf="selectedRoute == 'profile' ? true : false" marginTop="5" marginBottom="5" columns="15, auto, auto, *, auto, auto, 10">
+                        <label col="1" text="woorkout.pt" verticalalignment="center" fontsize="20" class="android-lbl"></label>
+                        <Label col="2" text="&#xf0d7;" class="fa android-lbl" marginleft="8" verticalalignment="center"
+                                fontsize="20"></Label>
+
+                        <Label col="4" text="&#xf017;" class="fa android-lbl" verticalalignment="center" fontsize="25"
+                                marginright="15"></Label>
+                        <Label col="5" text="&#xf0ae;" class="fa android-lbl" verticalalignment="center" fontsize="20"></Label>
+                        <Label col="5" text="2" borderRadius="100%" width="20" height="20" style="background: #ff4b60; color: white; margin-left:15; margin-bottom: 20;"
+                                verticalAlignment="top" horizontalAlignment="right" textAlignment="center"></Label>
+                </GridLayout>
+        </GridLayout>
+
+        <!-- home screen -->
+        <ScrollView row="1" *ngIf="selectedRoute == 'home' ? true : false">
+
+                <StackLayout>
+
+                        <!-- header -->
+                        <StackLayout borderBottomWidth="0.5" borderBottomColor="gray">
+                                <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
+                                        <StackLayout orientation="horizontal">
+                                                <GridLayout *ngFor="let header of instagram.home.header" height="90" rows="auto, auto"
+                                                        style="margin: 10;">
+                                                        <Image row="0" [src]="header.imageSrc" borderRadius="100%"
+                                                                verticalAlignment="center" horizontalAlignment="center"
+                                                                stretch="aspectFill" [ngClass]="{imgheaderown : header.isOwn, imgheader : !header.isOwn}"></Image>
+                                                        <Label row="0" text="" borderRadius="100%" height="70" width="70"
+                                                                [visibility]="!header.isOwn ? 'visible' : 'collapsed'"
+                                                                style="border-width: 2; border-color: #ff4b60;"></Label>
+                                                        <Label *ngIf="header.isOwn" row="0" borderRadius="100%" width="30"
+                                                                height="30" text="&#xf055;" fontSize="30"
+                                                                backgroundColor="white" color="#2E93F0" class="fa"
+                                                                textAlignment="center" verticalAlignment="bottom"
+                                                                horizontalAlignment="center" marginLeft="70"></Label>
+                                                        <Label row="1" [text]="header.title" color="black"
+                                                                textAlignment="center" marginTop="3"></Label>
+                                                </GridLayout>
+                                        </StackLayout>
+                                </ScrollView>
+                        </StackLayout>
+
+                        <!-- body -->
+                        <GridLayout rows="30, 30, *, auto" columns="10, auto,10, *, auto" *ngFor="let item of instagram.home.body"
+                                marginTop="5">
+                                <Image row="0" rowSpan="2" col="1" [src]="item.imageSrc" borderRadius="100%" height="40"
+                                        width="40" verticalAlignment="center" horizontalAlignment="center" stretch="aspectFill"></Image>
+                                <Label row="0" rowSpan="2" col="1" text="" borderRadius="100%" height="50" width="50"
+                                        style="border-width: 2; border-color: #ff4b60;;"></Label>
+                                <Label row="0" col="3" [text]="item.name" verticalAlignment="bottom" color="black"></Label>
+                                <Label row="1" col="3" [text]="item.location" verticalAlignment="top" color="#4c4c4c"></Label>
+                                <Label row="0" rowSpan="2" col="4" text="&#xf142;" class="fa" fontSize="25"
+                                        verticalAlignment="center" paddingright="25" margintop="5"></Label>
+                                <Image marginTop="10" row="2" col="0" colSpan="5" [src]="item.post" stretch="aspectFill"></Image>
+                                <GridLayout row="3" col="0" colSpan="5" rows="auto, auto, auto, auto, auto" columns="auto, auto, auto, *, auto"
+                                        margintop="5" marginbottom="20">
+                                        <Label row="0" col="0" text="&#xf004;" class="fa" fontSize="25"
+                                                verticalAlignment="center" padding="10"></Label>
+                                        <Label row="0" col="1" text="&#xf075;" class="fa" fontSize="25"
+                                                verticalAlignment="center" padding="10"></Label>
+                                        <Label row="0" col="2" text="&#xf1d8;" class="fa" fontSize="25"
+                                                verticalAlignment="center" padding="10"></Label>
+                                        <Label row="0" col="4" text="&#xf02e;" class="fa" fontSize="25"
+                                                verticalAlignment="center" padding="10"></Label>
+                                        <Label row="1" col="0" colSpan="5" text="{{ item.likes }} Likes"
+                                                verticalAlignment="bottom" color="black" paddingleft="10" fontSize="16"></Label>
+                                        <HtmlView marginLeft="10" row="2" col="0" colSpan="5" [html]="item.desc"
+                                                verticalAlignment="bottom"></HtmlView>
+                                        <Label row="3" col="0" colSpan="5" text="...more" verticalAlignment="bottom"
+                                                paddingleft="10"></Label>
+                                        <Label row="4" col="0" colSpan="5" [text]="item.time" verticalAlignment="bottom"
+                                                paddingleft="10"></Label>
+                                </GridLayout>
+                        </GridLayout>
+
+                </StackLayout>
+        </ScrollView>
+
+
+        <!-- search screen -->
+        <ScrollView row="1" *ngIf="selectedRoute == 'search' ? true : false">
+
+                <StackLayout>
+
+                        <GridLayout columns="auto, *, auto">
+                                <Label col="0" text="&#xf002;" class="fa" fontSize="25" verticalAlignment="center"
+                                        padding="10" color="black"></Label>
+                                <Label col="1" text="Search" fontSize="20" verticalAlignment="center" padding="10"></Label>
+                                <Label col="2" text="&#xf16d;" class="fa" fontSize="25" verticalAlignment="center"
+                                        padding="10" color="black"></Label>
+                        </GridLayout>
+
+                        <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
+                                <StackLayout orientation="horizontal">
+                                        <GridLayout *ngFor="let item of instagram.search.header" height="90" rows="auto" style="margin: 5;">
+                                                <Image borderRadius="10%" row="0" [src]="item.imageSrc" height="90"
+                                                        width="100" stretch="aspectFill"></Image>
+                                                <Image *ngIf="item.isOwn" borderRadius="100%" row="0" src="~/assets/wk.png"
+                                                        height="40" verticalAlignment="top" width="40" stretch="aspectFill"
+                                                        marginTop="10"></Image>
+                                                <Label row="0" [text]="item.title" color="white" fontSize="15"
+                                                        fontWeight="bold" verticalAlignment="bottom"
+                                                        horizontalAlignment="center" marginBottom="10" [ngClass]="{ shisown : item.isOwn }">
+                                                </Label>
+                                        </GridLayout>
+                                </StackLayout>
+                        </ScrollView>
+
+                        <GridLayout rows="auto, auto" columns="*, *, *" marginTop="5">
+                                <Image borderColor="white" borderWidth="1" row="0" col="0" [src]="instagram.search.midSection.imgSrc"
+                                        stretch="aspectFill"></Image>
+                                <Image borderColor="white" borderWidth="1" row="1" col="0" [src]="instagram.search.midSection.imgSrc1"
+                                        stretch="aspectFill"></Image>
+                                <Image borderColor="white" borderWidth="1" row="0" col="1" rowSpan="2" colSpan="2"
+                                        [src]="instagram.search.midSection.imgSrc2" stretch="aspectFill"></Image>
+                        </GridLayout>
+
+                        <FlexboxLayout flexWrap="wrap" width="100%">
+                                <Image *ngFor="let item of instagram.search.body" borderColor="white" borderWidth="1" [src]="item.imageSrc"
+                                        [height]="photoHeight" [width]="photoWidth" stretch="aspectFill"></Image>
+                        </FlexboxLayout>
+
+                </StackLayout>
+        </ScrollView>
+
+        <!-- profile -->
+        <ScrollView row="1" *ngIf="selectedRoute == 'profile' ? true : false">
+
+                <StackLayout>
+
+                        <GridLayout borderBottomWidth="0.5" borderBottomColor="gray" rows="auto, auto, auto, auto"
+                                columns="auto, 15, *, 15 *, 15, *" padding="10">
+                                <Image row="0" rowSpan="3" col="0" src="~/assets/wk.png" height="100" width="100"
+                                        borderRadius="100%" verticalAlignment="center" horizontalAlignment="center"
+                                        stretch="aspectFill"></Image>
+                                <Label row="0" rowSpan="3" col="0" borderRadius="100%" width="30" height="30" text="&#xf055;"
+                                        fontSize="30" backgroundColor="white" color="#2E93F0" class="fa" textAlignment="center"
+                                        verticalAlignment="bottom" horizontalAlignment="center" marginLeft="70"></Label>
+
+                                <Label row="0" col="2" fontWeight="bold" horizontalAlignment="center" verticalAlignment="bottom"
+                                        [text]="photos.length" class="android-lbl"></Label>
+                                <Label row="0" col="4" fontWeight="bold" horizontalAlignment="center" verticalAlignment="bottom"
+                                        text="220" class="android-lbl"></Label>
+                                <Label row="0" col="6" fontWeight="bold" horizontalAlignment="center" verticalAlignment="bottom"
+                                        text="430" class="android-lbl"></Label>
+
+                                <Label row="1" col="2" horizontalAlignment="center" verticalAlignment="top" color="gray"
+                                        fontSize="14" text="posts" textWrap="true"></Label>
+                                <Label row="1" col="4" horizontalAlignment="center" verticalAlignment="top" fontSize="14"
+                                        color="gray" text="followers" textWrap="true"></Label>
+                                <Label row="1" col="6" horizontalAlignment="center" verticalAlignment="top" fontSize="14"
+                                        color="gray" text="following" textWrap="true"></Label>
+
+                                <Label row="2" col="2" colSpan="5" class="android-lbl" text="Edit Profile" borderWidth="0.5"
+                                        borderColor="gray" borderRadius="5" verticalAlignment="top" textAlignment="center"
+                                        padding="5"></Label>
+
+                                <Label row="3" col="0" colSpan="7" text="Woorkout" fontWeight="bold" textWrap="true"
+                                        class="android-lbl" marginTop="20" marginBottom="10" marginLeft="5"></Label>
+                        </GridLayout>
+
+                        <GridLayout height="40" columns="*,*,*">
+                                <Label text="&#xf00a;" fontSize="25" color="#2E93F0" col="0" class="fa" textAlignment="center"
+                                        verticalAlignment="center" horizontalAlignment="center"></Label>
+                                <Label text="&#xf0c9;" fontSize="25" col="1" class="fa android-lbl" textAlignment="center"
+                                        verticalAlignment="center" horizontalAlignment="center"></Label>
+                                <Label text="&#xf02c;" fontSize="25" col="2" class="fa android-lbl" textAlignment="center"
+                                        verticalAlignment="center" horizontalAlignment="center"></Label>
+                        </GridLayout>
+
+                        <FlexboxLayout flexWrap="wrap" width="100%">
+                                <Image *ngFor="let photo of photos" borderColor="white" borderWidth="1" [src]="photo"
+                                        [height]="photoHeight" [width]="photoWidth" stretch="aspectFill"></Image>
+                        </FlexboxLayout>
+
+                </StackLayout>
+        </ScrollView>
+
+        <!-- notifications screen -->
+
+        <GridLayout row="1" rows="auto, *" *ngIf="selectedRoute == 'notifications' ? true : false">
+
+                <GridLayout row="0" columns="*, *" marginTop="5">
+                        <Label col="0" text="FOLLOWING" fontSize="20" padding="5" color="#cccccc" textAlignment="center"
+                                style="border-bottom-width: 1; border-bottom-color: #cccccc;"></Label>
+                        <Label col="1" text="YOU" fontSize="20" padding="5" color="black" textAlignment="center" style="border-bottom-width: 1; border-bottom-color: black;"></Label>
+                </GridLayout>
+                <ScrollView row="1">
+                        <StackLayout>
+                                <GridLayout rows="auto, auto" columns="10, auto,10, *">
+                                        <Label row="0" col="1" rowSpan="2" text="&#xf2bd;" class="fa followreq-image"
+                                                verticalAlignment="top"></Label>
+                                        <Label row="0" col="1" rowSpan="2" text="2" borderRadius="100%" width="20"
+                                                style="background: #ff4b60; color: white; margin-top: 25;"
+                                                verticalAlignment="top" horizontalAlignment="right" textAlignment="center"></Label>
+                                        <StackLayout row="0" rowSpan="2" col="3" marginTop="30">
+                                                <Label text="Follow Requests" fontSize="16" color="black"></Label>
+                                                <Label text="Approve or ignore requests" fontSize="14" color="#4c4c4c"></Label>
+                                        </StackLayout>
+                                </GridLayout>
+
+                                <GridLayout rows="auto, auto" columns="10, *" *ngFor="let item of instagram.notifications">
+                                        <Label row="0" col="1" [text]="item.notify_time" marginTop="20" marginBottom="20"
+                                                color="#4c4c4c"></Label>
+
+                                        <StackLayout orientation="vertical" row="1" col="1">
+                                                <GridLayout columns="auto,10, *, auto, 10" *ngFor="let notify_list of item.notify_list"
+                                                        orientation="vertical" marginBottom="20">
+                                                        <Image [src]="notify_list.imageSrc" col="0" borderRadius="100%"
+                                                                height="60" width="60" verticalAlignment="center"
+                                                                horizontalAlignment="center" stretch="aspectFill"></Image>
+                                                        <StackLayout col="2" verticalAlignment="center">
+                                                                <HtmlView [html]="notify_list.desc" verticalAlignment="bottom"></HtmlView>
+                                                        </StackLayout>
+                                                        <Image *ngIf="notify_list.imageSrc2" [src]="notify_list.imageSrc2" col="3" borderRadius="5"
+                                                                height="60" width="60" verticalAlignment="center"
+                                                                horizontalAlignment="center" stretch="aspectFill"></Image>
+                                                </GridLayout>
+                                        </StackLayout>
+
+                                </GridLayout>
+                        </StackLayout>
+                </ScrollView>
+        </GridLayout>
+
+
+
+        <GridLayout row="2" columns="*,*,*,*,*" borderTopWidth="0.5" borderTopColor="gray">
+                <Label text="&#xf015;" col="0" class="fa android-lbl" fontSize="25" textAlignment="center"
+                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('home')"></Label>
+                <Label text="&#xf002;" col="1" class="fa android-lbl" fontSize="25" textAlignment="center"
+                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('search')"></Label>
+                <Label text="&#xf196;" (tap)="takePhoto()" col="2" class="fa android-lbl" fontSize="30" textAlignment="center"
+                        verticalAlignment="center" horizontalAlignment="center"></Label>
+                <Label text="&#xf08a;" col="3" class="fa android-lbl" fontSize="25" textAlignment="center"
+                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('notifications')"></Label>
+                <Label text="&#xf007;" col="4" class="fa android-lbl" fontSize="25" textAlignment="center"
+                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('profile')"></Label>
+        </GridLayout>
+
+</GridLayout>

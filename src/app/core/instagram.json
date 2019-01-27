@@ -1,0 +1,276 @@
+{
+    "instagram": {
+        "home": {
+            "header": [
+                {
+                    "isOwn": true,
+                    "imageSrc": "~/assets/wk.png",
+                    "title": "Your Story"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face1.jpg",
+                    "title": "william"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face3.jpg",
+                    "title": "pavlo"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face4.jpg",
+                    "title": "kumaran"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face3.jpg",
+                    "title": "john"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "~/assets/face2.jpg",
+                    "title": "dena007"
+                }
+            ],
+            "body": [
+                {
+                    "imageSrc": "~/assets/face3.jpg",
+                    "name": "Pavlo",
+                    "location": "Lisbon Portugal",
+                    "post": "~/assets/wk.png",
+                    "likes": "400",
+                    "desc": "<span><font color=\"black\">Pavlo</font> <font color=\"#4c4c4c\">#woorkout.pt#startup</font></span>",
+                    "time": "2 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face4.jpg",
+                    "name": "Kumaran",
+                    "location": "Bangalore India",
+                    "post": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
+                    "likes": "300",
+                    "desc": "<span><font color=\"black\">Kumaran</font> <font color=\"#4c4c4c\">#throwback</font></span>",
+                    "time": "3 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face1.jpg",
+                    "name": "William",
+                    "location": "Indiana US",
+                    "post": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg",
+                    "likes": "500",
+                    "desc": "<span><font color=\"black\">William</font> <font color=\"#4c4c4c\">#throwback</font></span>",
+                    "time": "4 hours ago"
+                },
+                {
+                    "imageSrc": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
+                    "name": "#NativeScript",
+                    "location": "Bedford MA",
+                    "post": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
+                    "likes": "1000",
+                    "desc": "<span><font color=\"black\">NativeScript</font> <font color=\"#4c4c4c\">#throwback</font></span>",
+                    "time": "6 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face2.jpg",
+                    "name": "John",
+                    "location": "San Francisco",
+                    "post": "~/assets/face2.jpg",
+                    "likes": "100",
+                    "desc": "<span><font color=\"black\">John</font> <font color=\"#4c4c4c\">#throwback</font></span>",
+                    "time": "7 hours ago"
+                },
+                {
+                    "imageSrc": "~/assets/face3.jpg",
+                    "name": "dena007",
+                    "location": "CA",
+                    "post": "https://cdn.pixabay.com/photo/2018/10/31/22/42/surprised-3786845__480.jpg",
+                    "likes": "150",
+                    "desc": "<span><font color=\"black\">dena007</font> <font color=\"#4c4c4c\">#throwback</font></span>",
+                    "time": "9 hours ago"
+                }
+            ]
+        },
+        "search": {
+            "header": [
+                {
+                    "isOwn": true,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
+                    "title": "For You"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/09/12/12/14/photographer-3672010__480.jpg",
+                    "title": "Style"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/23/14/19/forest-3833973__480.jpg",
+                    "title": "Fitness"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/04/04/10/11/portrait-3289372__480.jpg",
+                    "title": "Comics"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg",
+                    "title": "Beauty"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149__480.jpg",
+                    "title": "Travel"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/04/20/21/harley-davidson-3794909__480.jpg",
+                    "title": "Science & Tech"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg",
+                    "title": "Shopping"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/09/14/44/leaf-3865014__480.jpg",
+                    "title": "Decor"
+                },
+                {
+                    "isOwn": false,
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/07/16/13/17/kiss-3541905__480.jpg",
+                    "title": "Music"
+                }
+            ],
+            "body": [
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/09/12/12/14/photographer-3672010__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg"
+                },
+                {
+                    "imageSrc": "~/assets/face2.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/09/14/44/leaf-3865014__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/07/16/13/17/kiss-3541905__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/09/14/44/leaf-3865014__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/10/05/22/53/sheep-3727049__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/29/21/19/hamburg-3846525_1280.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg"
+                },
+                {
+                    "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg"
+                }
+            ],
+            "midSection": {
+                "imgSrc": "https://www.gettyimages.com/gi-resources/images/CreativeLandingPage/HP_Sept_24_2018/CR3_GettyImages-159018836.jpg",
+                "imgSrc1": "https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149__480.jpg",
+                "imgSrc2": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg"
+            }
+        },
+        "notifications": [
+            {
+                "notify_time": "Yesterday",
+                "notify_list": [
+                    {
+                        "imageSrc": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
+                        "desc": "<span><font color=\"black\">William, Pavlo, and kumaran</font> <font color=\"#4c4c4c\">shared 15 photos.</font> 1d</span>",
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "~/assets/face4.jpg",
+                        "desc": "<span><font color=\"black\">kumaran</font> <font color=\"#4c4c4c\">liked your post.</font> 1d</span>",
+                        "imageSrc2": "~/assets/wk.png"
+                    },
+                    {
+                        "imageSrc": "~/assets/face3.jpg",
+                        "desc": "<span><font color=\"black\">Pavlo</font> <font color=\"#4c4c4c\">commented: Looks cool😜.</font> 1d</span>",
+                        "imageSrc2": "https://cdn.pixabay.com/photo/2018/11/04/20/21/harley-davidson-3794909__480.jpg"
+                    }
+                ]
+            },
+            {
+                "notify_time": "This Week",
+                "notify_list": [
+                    {
+                        "imageSrc": "~/assets/face1.jpg",
+                        "desc": "<span><font color=\"black\">William </font> <font color=\"#4c4c4c\">liked your post.</font> 4d</span>",
+                        "imageSrc2": "~/assets/wk.png"
+                    },
+                    {
+                        "imageSrc": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
+                        "desc": "<span><font color=\"black\">NativeScript </font> <font color=\"#4c4c4c\">shared their first post.</font> 5d</span>",
+                        "imageSrc2": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"
+                    }
+                ]
+            },
+            {
+                "notify_time": "This Month",
+                "notify_list": [
+                    {
+                        "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg",
+                        "desc": "<span><font color=\"black\">William, and Pavlo</font> <font color=\"#4c4c4c\">shared 20 photos.</font> 1w</span>",
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg",
+                        "desc": "<span><font color=\"black\">Pavlo, and kumaran</font> <font color=\"#4c4c4c\">shared 10 photos.</font> 3w</span>",
+                        "imageSrc2": ""
+                    }
+                ]
+            },
+            {
+                "notify_time": "Earlier",
+                "notify_list": [
+                    {
+                        "imageSrc": "~/assets/face4.jpg",
+                        "desc": "<span><font color=\"black\">Kumaran</font> <font color=\"#4c4c4c\">started following you.</font> 5w</span>",
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "~/assets/face3.jpg",
+                        "desc": "<span><font color=\"black\">Pavlo</font> <font color=\"#4c4c4c\">started following you.</font> 8w</span>",
+                        "imageSrc2": ""
+                    },
+                    {
+                        "imageSrc": "~/assets/face1.jpg",
+                        "desc": "<span><font color=\"black\">William</font> <font color=\"#4c4c4c\">started following you.</font> 14w</span>",
+                        "imageSrc2": ""
+                    }
+                ]
+            }
+        ],
+        "profile": []
+    }
+}
