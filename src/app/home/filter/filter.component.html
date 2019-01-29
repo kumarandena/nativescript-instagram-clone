@@ -1,0 +1,62 @@
+
+<GridLayout rows="auto, *,150, auto">
+
+    <GridLayout row="0" marginTop="10" marginBottom="10" columns="10, auto, *, auto, 10">
+        <Image col="1" src="~/assets/backicon.png" width="30" height="30"
+            stretch="aspectFill" (tap)="onClose('')"></Image>
+        <Label col="2" text="Choose Filter" fontSize="18" class="android-lbl"
+            fontWeight="bold" textAlignment="center"></Label>
+        <Label col="3" text="Post" fontSize="16" class="android-lbl"
+            textAlignment="center" (tap)="usePhoto()"></Label>
+    </GridLayout>
+
+    <Image row="1" [src]="photo" stretch="aspectFill"></Image>
+    <Label row="1" text="" [backgroundColor]="filter" opacity="0.2"></Label>
+
+
+    <ScrollView row="2" orientation="horizontal" scrollBarIndicatorVisible="false">
+
+        <StackLayout orientation="horizontal">
+
+            <GridLayout height="140" width="140" marginLeft="10" (tap)="applyFilter('transparent')">
+                <Image [src]="photo" stretch="aspectFill"></Image>
+                <Label text="" backgroundColor="transparent" opacity="0.2"></Label>
+            </GridLayout>
+
+            <GridLayout height="140" width="140" marginLeft="10" (tap)="applyFilter('green')">
+                <Image [src]="photo" stretch="aspectFill"></Image>
+                <Label text="" backgroundColor="green" opacity="0.2"></Label>
+            </GridLayout>
+
+            <GridLayout height="140" width="140" marginLeft="10" (tap)="applyFilter('pink')">
+                <Image [src]="photo" stretch="aspectFill"></Image>
+                <Label text="" backgroundColor="pink" opacity="0.2"></Label>
+            </GridLayout>
+
+            <GridLayout height="140" width="140" marginLeft="10" (tap)="applyFilter('black')">
+                <Image [src]="photo" stretch="aspectFill"></Image>
+                <Label text="" backgroundColor="black" opacity="0.2"></Label>
+            </GridLayout>
+
+            <GridLayout height="140" width="140" marginLeft="10" (tap)="applyFilter('blue')">
+                <Image [src]="photo" stretch="aspectFill"></Image>
+                <Label text="" backgroundColor="blue" opacity="0.2"></Label>
+            </GridLayout>
+
+            <GridLayout height="140" width="140" marginLeft="10" (tap)="applyFilter('red')">
+                <Image [src]="photo" stretch="aspectFill"></Image>
+                <Label text="" backgroundColor="red" opacity="0.2"></Label>
+            </GridLayout>
+
+
+        </StackLayout>
+
+    </ScrollView>
+
+    <StackLayout row="3" style="border-width: 0.5; border-color: white;">
+        <Label fontSize="25" class="fa android-lbl" [ngClass]="{btmandroid : !isIOS}"
+            height="60" textAlignment="center" width="100%" text="&#xf030; Take Another"
+            (tap)="takePhoto()" textWrap="true"></Label>
+    </StackLayout>
+
+</GridLayout>

@@ -1,18 +1,18 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewContainerRef } from "@angular/core";
 import { Page } from "ui/page";
 import { screen } from "platform";
-import { RouterExtensions } from "nativescript-angular/router";
-import { ActivatedRoute } from "@angular/router";
 import { PhotosService } from "../core/photos.service";
 import { CameraService } from "../core/camera.service";
 import { FileReaderService } from "../core/fileReader.service";
-  
+import { FilterComponent } from "./filter/filter.component";
+import { ModalDialogOptions, ModalDialogService } from "nativescript-angular/modal-dialog";
+
 @Component({
     selector: "Home",
     moduleId: module.id,
     templateUrl: "./home.component.html",
-    styleUrls: ["./home.component.css"]
-})
+    styleUrls: ['./home.component.css']
+}) 
 export class HomeComponent implements OnInit {
 
     photoWidth: number = screen.mainScreen.widthDIPs * 0.33333;
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
     instagram: any[] = [];
 
-    constructor(private routerExtensions: RouterExtensions, private route: ActivatedRoute, private photosService: PhotosService, private camera: CameraService, private page: Page, private fileReader: FileReaderService) {
+    constructor( private photosService: PhotosService, private camera: CameraService, private page: Page, private fileReader: FileReaderService, private modal: ModalDialogService, private vref: ViewContainerRef) {
         this.photos = this.photosService.getPhotos();
         this.letsInitialize();
     }
@@ -43,11 +43,27 @@ export class HomeComponent implements OnInit {
     }
 
     takePhoto() {
-
         this.camera.takePhoto()
             .then(imageAsset => {
-                this.photosService.setTakenPhoto(imageAsset);
-                this.routerExtensions.navigate(['take-picture'], { relativeTo: this.route, animated: false });
+                this.onNavtap('loading');
+                const options: ModalDialogOptions = {
+                    context: imageAsset,
+                    viewContainerRef: this.vref,
+                    fullscreen: true
+                };
+                setTimeout(() => { //https://github.com/NativeScript/NativeScript/issues/5744#issuecomment-384589739
+                this.modal.showModal(FilterComponent, options).then((response) => {
+                    if (response == 'success') {
+                        this.onNavtap('profile');
+                    }
+                    else { 
+                        this.onNavtap('home');
+                    }
+                }, error => {
+                    console.log(error);
+                });
+            }, 1);
+
             }).catch(err => {
                 console.log(err.message);
             });
@@ -58,5 +74,4 @@ export class HomeComponent implements OnInit {
     onNavtap(route: string) {
         this.selectedRoute = route;
     }
-
 }

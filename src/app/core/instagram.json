@@ -205,17 +205,17 @@
                 "notify_list": [
                     {
                         "imageSrc": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
-                        "desc": "<span><font color=\"black\">William, Pavlo, and kumaran</font> <font color=\"#4c4c4c\">shared 15 photos.</font> 1d</span>",
+                        "desc": "<span><b><font color=\"black\">William, Pavlo, and kumaran</font></b> <font color=\"black\">shared 15 photos.</font> <font color=\"#4c4c4c\">1d</font> </span>",
                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "~/assets/face4.jpg",
-                        "desc": "<span><font color=\"black\">kumaran</font> <font color=\"#4c4c4c\">liked your post.</font> 1d</span>",
+                        "desc": "<span><b><font color=\"black\">kumaran</font></b> <font color=\"black\">liked your post.</font> <font color=\"#4c4c4c\">1d</font></span>",
                         "imageSrc2": "~/assets/wk.png"
                     },
                     {
                         "imageSrc": "~/assets/face3.jpg",
-                        "desc": "<span><font color=\"black\">Pavlo</font> <font color=\"#4c4c4c\">commented: Looks cool😜.</font> 1d</span>",
+                        "desc": "<span><b><font color=\"black\">Pavlo</font></b> <font color=\"black\">commented: Looks cool😜.</font> <font color=\"#4c4c4c\">1d</font></span>",
                         "imageSrc2": "https://cdn.pixabay.com/photo/2018/11/04/20/21/harley-davidson-3794909__480.jpg"
                     }
                 ]
@@ -225,12 +225,12 @@
                 "notify_list": [
                     {
                         "imageSrc": "~/assets/face1.jpg",
-                        "desc": "<span><font color=\"black\">William </font> <font color=\"#4c4c4c\">liked your post.</font> 4d</span>",
+                        "desc": "<span><b><font color=\"black\">William </font></b> <font color=\"black\">liked your post.</font> <font color=\"#4c4c4c\">4d</font></span>",
                         "imageSrc2": "~/assets/wk.png"
                     },
                     {
                         "imageSrc": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
-                        "desc": "<span><font color=\"black\">NativeScript </font> <font color=\"#4c4c4c\">shared their first post.</font> 5d</span>",
+                        "desc": "<span><b><font color=\"black\">NativeScript </font></b> <font color=\"black\">shared their first post.</font> <font color=\"#4c4c4c\">5d</font></span>",
                         "imageSrc2": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"
                     }
                 ]
@@ -240,12 +240,12 @@
                 "notify_list": [
                     {
                         "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg",
-                        "desc": "<span><font color=\"black\">William, and Pavlo</font> <font color=\"#4c4c4c\">shared 20 photos.</font> 1w</span>",
+                        "desc": "<span><b><font color=\"black\">William, and Pavlo</font></b> <font color=\"black\">shared 20 photos.</font> <font color=\"#4c4c4c\">1w</font></span>",
                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg",
-                        "desc": "<span><font color=\"black\">Pavlo, and kumaran</font> <font color=\"#4c4c4c\">shared 10 photos.</font> 3w</span>",
+                        "desc": "<span><b><font color=\"black\">Pavlo, and kumaran</font></b> <font color=\"black\">shared 10 photos.</font> <font color=\"#4c4c4c\">3w</font></span>",
                         "imageSrc2": ""
                     }
                 ]
@@ -255,17 +255,17 @@
                 "notify_list": [
                     {
                         "imageSrc": "~/assets/face4.jpg",
-                        "desc": "<span><font color=\"black\">Kumaran</font> <font color=\"#4c4c4c\">started following you.</font> 5w</span>",
+                        "desc": "<span><b><font color=\"black\">Kumaran</font></b> <font color=\"black\">started following you.</font> <font color=\"#4c4c4c\">5w</font></span>",
                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "~/assets/face3.jpg",
-                        "desc": "<span><font color=\"black\">Pavlo</font> <font color=\"#4c4c4c\">started following you.</font> 8w</span>",
+                        "desc": "<span><b><font color=\"black\">Pavlo</font></b> <font color=\"black\">started following you.</font> <font color=\"#4c4c4c\">8w</font></span>",
                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "~/assets/face1.jpg",
-                        "desc": "<span><font color=\"black\">William</font> <font color=\"#4c4c4c\">started following you.</font> 14w</span>",
+                        "desc": "<span><b><font color=\"black\">William</font></b> <font color=\"black\">started following you.</font> <font color=\"#4c4c4c\">14w</font></span>",
                         "imageSrc2": ""
                     }
                 ]

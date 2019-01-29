@@ -3,7 +3,7 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./home.component";
-import { TakePictureComponent } from "../filter-screen/take-picture.component";
+import { FilterComponent } from "./filter/filter.component";
 
 @NgModule({
     imports: [
@@ -12,11 +12,13 @@ import { TakePictureComponent } from "../filter-screen/take-picture.component";
     ],
     declarations: [
         HomeComponent,
-        TakePictureComponent
+        FilterComponent
     ],
-    
     schemas: [
         NO_ERRORS_SCHEMA
+    ],
+    entryComponents: [
+        FilterComponent
     ]
 })
 export class HomeModule { }

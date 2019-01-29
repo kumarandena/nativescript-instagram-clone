@@ -38,15 +38,6 @@ export class PhotosService {
 
     constructor(private localStorage: LocalStorage) { }
 
-
-    setTakenPhoto(photo: ImageAsset) {
-        this.takenPhoto = photo;
-    }
-
-    getTakenPhoto(): ImageAsset {
-        return this.takenPhoto;
-    }
-
     getPhotos() {
         return this.photos;
     }
