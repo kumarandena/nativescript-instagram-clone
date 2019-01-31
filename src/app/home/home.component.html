@@ -243,19 +243,22 @@
         <GridLayout row="1" *ngIf="selectedRoute == 'loading' ? true : false" verticalAlignment="center">
                 <ActivityIndicator busy="true" class="activity-indicator" color="black"></ActivityIndicator>
         </GridLayout>
- 
+
         <!-- bottom bar -->
         <GridLayout row="2" columns="*,*,*,*,*" borderTopWidth="0.5" borderTopColor="gray">
                 <Label text="&#xf015;" col="0" class="fa android-lbl" fontSize="25" textAlignment="center"
-                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('home')"></Label>
+                        verticalAlignment="center" [ngClass]="{tabselected : isSelected == '0'? true : false, tabnotselected : isselected != '0'? false: true}"
+                        horizontalAlignment="center" (tap)="onNavtap('home', '0')"></Label>
                 <Label text="&#xf002;" col="1" class="fa android-lbl" fontSize="25" textAlignment="center"
-                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('search')"></Label>
+                        verticalAlignment="center" [ngClass]="{tabselected : isSelected == '1'? true : false, tabnotselected : isselected != '1'? false: true}"
+                        horizontalAlignment="center" (tap)="onNavtap('search', '1')"></Label>
                 <Label text="&#xf196;" (tap)="takePhoto()" col="2" class="fa android-lbl" fontSize="30" textAlignment="center"
                         verticalAlignment="center" horizontalAlignment="center"></Label>
-                <Label text="&#xf08a;" col="3" class="fa android-lbl" fontSize="25" textAlignment="center"
-                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('notifications')"></Label>
+                <Label text="&#xf08a;" col="3" class="fa android-lbl" fontSize="25" textAlignment="center" [ngClass]="{tabselected : isSelected == '3'? true : false, tabnotselected : isselected != '3'? false: true}"
+                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('notifications', '3')"></Label>
                 <Label text="&#xf007;" col="4" class="fa android-lbl" fontSize="25" textAlignment="center"
-                        verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('profile')"></Label>
+                        verticalAlignment="center" [ngClass]="{tabselected : isSelected == '4'? true : false, tabnotselected : isselected != '4'? false: true}"
+                        horizontalAlignment="center" (tap)="onNavtap('profile', '4')"></Label>
         </GridLayout>
 
 </GridLayout>

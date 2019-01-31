@@ -22,3 +22,11 @@ padding: 0;
 margin-bottom: 5;
 margin-top: 20;
 }
+
+.tabselected {
+color: #ff4b60;
+}
+
+.tabnotselected {
+color: black;
+}

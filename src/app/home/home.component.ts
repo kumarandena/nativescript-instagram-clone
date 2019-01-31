@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
 
     instagram: any[] = [];
 
+    isSelected: string = '0';
+
     constructor( private photosService: PhotosService, private camera: CameraService, private page: Page, private fileReader: FileReaderService, private modal: ModalDialogService, private vref: ViewContainerRef) {
         this.photos = this.photosService.getPhotos();
         this.letsInitialize();
@@ -45,7 +47,7 @@ export class HomeComponent implements OnInit {
     takePhoto() {
         this.camera.takePhoto()
             .then(imageAsset => {
-                this.onNavtap('loading');
+                this.onNavtap('loading', '');
                 const options: ModalDialogOptions = {
                     context: imageAsset,
                     viewContainerRef: this.vref,
@@ -54,15 +56,15 @@ export class HomeComponent implements OnInit {
                 setTimeout(() => { //https://github.com/NativeScript/NativeScript/issues/5744#issuecomment-384589739
                 this.modal.showModal(FilterComponent, options).then((response) => {
                     if (response == 'success') {
-                        this.onNavtap('profile');
+                        this.onNavtap('profile', '4');
                     }
                     else { 
-                        this.onNavtap('home');
+                        this.onNavtap('home', '0');
                     }
                 }, error => {
                     console.log(error);
                 });
-            }, 1);
+            }, 100);
 
             }).catch(err => {
                 console.log(err.message);
@@ -71,7 +73,8 @@ export class HomeComponent implements OnInit {
 
     selectedRoute: string = 'home';
 
-    onNavtap(route: string) {
+    onNavtap(route: string, selectedTab: string) {
         this.selectedRoute = route;
+        this.isSelected = selectedTab;
     }
 }

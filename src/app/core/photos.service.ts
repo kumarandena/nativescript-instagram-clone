@@ -45,8 +45,10 @@ export class PhotosService {
     addPhoto() {
 
         const photoToAdd: string = this.photoExamples[Math.floor(Math.random() * (this.photoExamples.length - 1)) + 1];
-        this.photos.unshift(photoToAdd);
-        this.localStorage.saveValue(JSON.stringify(this.photos), 'photos');
+        if (photoToAdd != '') {
+            this.photos.unshift(photoToAdd);
+            this.localStorage.saveValue(JSON.stringify(this.photos), 'photos');
+        }
     }
 
     getFromLocalStorage() {
