@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewContainerRef } from "@angular/core";
+import { Component, OnInit, ViewContainerRef, ChangeDetectorRef } from "@angular/core";
 import { Page } from "ui/page";
 import { screen } from "platform";
 import { PhotosService } from "../core/photos.service";
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
 
     isSelected: string = '0';
 
-    constructor( private photosService: PhotosService, private camera: CameraService, private page: Page, private fileReader: FileReaderService, private modal: ModalDialogService, private vref: ViewContainerRef) {
+    constructor( private photosService: PhotosService, private camera: CameraService, private page: Page, private fileReader: FileReaderService, private modal: ModalDialogService, private vref: ViewContainerRef, private cd: ChangeDetectorRef) {
         this.photos = this.photosService.getPhotos();
         this.letsInitialize();
     }
@@ -74,7 +74,8 @@ export class HomeComponent implements OnInit {
     selectedRoute: string = 'home';
 
     onNavtap(route: string, selectedTab: string) {
-        this.selectedRoute = route;
         this.isSelected = selectedTab;
+        this.selectedRoute = route;
+        this.cd.detectChanges();
     }
 }

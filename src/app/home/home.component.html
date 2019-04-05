@@ -77,12 +77,17 @@
                                                 verticalAlignment="center" padding="10"></Label>
                                         <Label row="1" col="0" colSpan="5" text="{{ item.likes }} Likes"
                                                 verticalAlignment="bottom" color="black" paddingleft="10" fontSize="16"></Label>
-                                        <HtmlView marginLeft="10" row="2" col="0" colSpan="5" [html]="item.desc"
-                                                verticalAlignment="bottom"></HtmlView>
+                                        <Label marginLeft="10" row="2" col="0" colSpan="5" verticalAlignment="bottom"
+                                                textWrap="true">
+                                                <FormattedString>
+                                                        <Span [text]="item.desc.person" color="black"></Span>
+                                                        <Span [text]="item.desc.content" color="#2E93F0"></Span>
+                                                </FormattedString>
+                                        </Label>
                                         <Label row="3" col="0" colSpan="5" text="...more" verticalAlignment="bottom"
-                                                paddingleft="10"></Label>
+                                                paddingleft="10" color="#4c4c4c"></Label>
                                         <Label row="4" col="0" colSpan="5" [text]="item.time" verticalAlignment="bottom"
-                                                paddingleft="10"></Label>
+                                                paddingleft="10" color="#4c4c4c"></Label>
                                 </GridLayout>
                         </GridLayout>
 
@@ -208,9 +213,8 @@
                                                 style="background: #ff4b60; color: white; margin-top: 25;"
                                                 verticalAlignment="top" horizontalAlignment="right" textAlignment="center"></Label>
                                         <StackLayout row="0" rowSpan="2" col="3" marginTop="30">
-                                                <Label text="Follow Requests" fontSize="16" fontweight="bold" color="black"></Label>
-                                                <Label text="Approve or ignore requests" fontSize="14" color="#4c4c4c"
-                                                        marginTop="3"></Label>
+                                                <Label text="Follow Requests" fontWeight="bold" color="black"></Label>
+                                                <Label text="Approve or ignore requests" color="#4c4c4c" marginTop="3"></Label>
                                         </StackLayout>
                                 </GridLayout>
 
@@ -225,7 +229,16 @@
                                                                 height="60" width="60" verticalAlignment="center"
                                                                 horizontalAlignment="center" stretch="aspectFill"></Image>
                                                         <StackLayout col="2" verticalAlignment="center">
-                                                                <HtmlView [html]="notify_list.desc" verticalAlignment="bottom"></HtmlView>
+                                                                <Label textWrap="true">
+                                                                        <FormattedString>
+                                                                                <Span [text]="notify_list.desc.name"
+                                                                                        fontWeight="bold" color="black"></Span>
+                                                                                <Span [text]="notify_list.desc.content"
+                                                                                        color="black"></Span>
+                                                                                <Span [text]="notify_list.desc.date"
+                                                                                        color="#4c4c4c"></Span>
+                                                                        </FormattedString>
+                                                                </Label>
                                                         </StackLayout>
                                                         <Image *ngIf="notify_list.imageSrc2" [src]="notify_list.imageSrc2"
                                                                 col="3" borderRadius="5" height="60" width="60"
@@ -246,17 +259,17 @@
 
         <!-- bottom bar -->
         <GridLayout row="2" columns="*,*,*,*,*" borderTopWidth="0.5" borderTopColor="gray">
-                <Label text="&#xf015;" col="0" class="fa android-lbl" fontSize="25" textAlignment="center"
+                <Label text="&#xf015;" col="0" class="fa android-lbl" fontSize="30" textAlignment="center"
                         verticalAlignment="center" [ngClass]="{tabselected : isSelected == '0'? true : false, tabnotselected : isselected != '0'? false: true}"
                         horizontalAlignment="center" (tap)="onNavtap('home', '0')"></Label>
-                <Label text="&#xf002;" col="1" class="fa android-lbl" fontSize="25" textAlignment="center"
+                <Label text="&#xf002;" col="1" class="fa android-lbl" fontSize="30" textAlignment="center"
                         verticalAlignment="center" [ngClass]="{tabselected : isSelected == '1'? true : false, tabnotselected : isselected != '1'? false: true}"
                         horizontalAlignment="center" (tap)="onNavtap('search', '1')"></Label>
-                <Label text="&#xf196;" (tap)="takePhoto()" col="2" class="fa android-lbl" fontSize="30" textAlignment="center"
+                <Label text="&#xf196;" (tap)="takePhoto()" col="2" class="fa android-lbl" fontSize="35" textAlignment="center"
                         verticalAlignment="center" horizontalAlignment="center"></Label>
-                <Label text="&#xf08a;" col="3" class="fa android-lbl" fontSize="25" textAlignment="center" [ngClass]="{tabselected : isSelected == '3'? true : false, tabnotselected : isselected != '3'? false: true}"
+                <Label text="&#xf08a;" col="3" class="fa android-lbl" fontSize="30" textAlignment="center" [ngClass]="{tabselected : isSelected == '3'? true : false, tabnotselected : isselected != '3'? false: true}"
                         verticalAlignment="center" horizontalAlignment="center" (tap)="onNavtap('notifications', '3')"></Label>
-                <Label text="&#xf007;" col="4" class="fa android-lbl" fontSize="25" textAlignment="center"
+                <Label text="&#xf007;" col="4" class="fa android-lbl" fontSize="30" textAlignment="center"
                         verticalAlignment="center" [ngClass]="{tabselected : isSelected == '4'? true : false, tabnotselected : isselected != '4'? false: true}"
                         horizontalAlignment="center" (tap)="onNavtap('profile', '4')"></Label>
         </GridLayout>
