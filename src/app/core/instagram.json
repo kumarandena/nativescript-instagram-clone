@@ -40,8 +40,11 @@
                     "location": "Lisbon Portugal",
                     "post": "~/assets/wk.png",
                     "likes": "400",
-                    "desc": "<span><font color=\"black\">Pavlo</font> <font color=\"#4c4c4c\">#woorkout.pt#startup</font></span>",
-                    "time": "2 hours ago"
+                    "desc": {
+                        "person": "Pavlo ",
+                        "content": "#woorkout.pt#startup"
+                     },
+                     "time": "2 hours ago"
                 },
                 {
                     "imageSrc": "~/assets/face4.jpg",
@@ -49,8 +52,11 @@
                     "location": "Bangalore India",
                     "post": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
                     "likes": "300",
-                    "desc": "<span><font color=\"black\">Kumaran</font> <font color=\"#4c4c4c\">#throwback</font></span>",
-                    "time": "3 hours ago"
+                    "desc": {
+                        "person": "Kumaran ",
+                        "content": "#throwback"
+                     },
+                     "time": "3 hours ago"
                 },
                 {
                     "imageSrc": "~/assets/face1.jpg",
@@ -58,8 +64,11 @@
                     "location": "Indiana US",
                     "post": "https://cdn.pixabay.com/photo/2018/12/29/23/49/rays-3902368__480.jpg",
                     "likes": "500",
-                    "desc": "<span><font color=\"black\">William</font> <font color=\"#4c4c4c\">#throwback</font></span>",
-                    "time": "4 hours ago"
+                    "desc": {
+                        "person": "William ",
+                        "content": "#throwback"
+                     },
+                     "time": "4 hours ago"
                 },
                 {
                     "imageSrc": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
@@ -67,8 +76,11 @@
                     "location": "Bedford MA",
                     "post": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
                     "likes": "1000",
-                    "desc": "<span><font color=\"black\">NativeScript</font> <font color=\"#4c4c4c\">#throwback</font></span>",
-                    "time": "6 hours ago"
+                    "desc": {
+                        "person": "NativeScript ",
+                        "content": "#throwback"
+                     },
+                     "time": "6 hours ago"
                 },
                 {
                     "imageSrc": "~/assets/face2.jpg",
@@ -76,8 +88,11 @@
                     "location": "San Francisco",
                     "post": "~/assets/face2.jpg",
                     "likes": "100",
-                    "desc": "<span><font color=\"black\">John</font> <font color=\"#4c4c4c\">#throwback</font></span>",
-                    "time": "7 hours ago"
+                    "desc": {
+                        "person": "John ",
+                        "content": "#throwback"
+                     },
+                     "time": "7 hours ago"
                 },
                 {
                     "imageSrc": "~/assets/face3.jpg",
@@ -85,7 +100,10 @@
                     "location": "CA",
                     "post": "https://cdn.pixabay.com/photo/2018/10/31/22/42/surprised-3786845__480.jpg",
                     "likes": "150",
-                    "desc": "<span><font color=\"black\">dena007</font> <font color=\"#4c4c4c\">#throwback</font></span>",
+                    "desc": {
+                        "person": "dena007 ",
+                        "content": "#throwback"
+                     },
                     "time": "9 hours ago"
                 }
             ]
@@ -205,18 +223,30 @@
                 "notify_list": [
                     {
                         "imageSrc": "https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg",
-                        "desc": "<span><b><font color=\"black\">William, Pavlo, and kumaran</font></b> <font color=\"black\">shared 15 photos.</font> <font color=\"#4c4c4c\">1d</font> </span>",
+                        "desc": {
+                            "name": "William, Pavlo, and kumaran ",
+                            "content": "shared 15 photos. ",
+                            "date": "1d"
+                         },
                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "~/assets/face4.jpg",
-                        "desc": "<span><b><font color=\"black\">kumaran</font></b> <font color=\"black\">liked your post.</font> <font color=\"#4c4c4c\">1d</font></span>",
-                        "imageSrc2": "~/assets/wk.png"
+                        "desc": {
+                            "name": "kumaran ",
+                            "content": "liked your post. ",
+                            "date": "1d"
+                         },
+                         "imageSrc2": "~/assets/wk.png"
                     },
                     {
                         "imageSrc": "~/assets/face3.jpg",
-                        "desc": "<span><b><font color=\"black\">Pavlo</font></b> <font color=\"black\">commented: Looks cool😜.</font> <font color=\"#4c4c4c\">1d</font></span>",
-                        "imageSrc2": "https://cdn.pixabay.com/photo/2018/11/04/20/21/harley-davidson-3794909__480.jpg"
+                        "desc": {
+                            "name": "Pavlo ",
+                            "content": "commented: Looks cool😜. ",
+                            "date": "1d"
+                         },
+                         "imageSrc2": "https://cdn.pixabay.com/photo/2018/11/04/20/21/harley-davidson-3794909__480.jpg"
                     }
                 ]
             },
@@ -225,13 +255,21 @@
                 "notify_list": [
                     {
                         "imageSrc": "~/assets/face1.jpg",
-                        "desc": "<span><b><font color=\"black\">William </font></b> <font color=\"black\">liked your post.</font> <font color=\"#4c4c4c\">4d</font></span>",
-                        "imageSrc2": "~/assets/wk.png"
+                        "desc": {
+                            "name": "William ",
+                            "content": "liked your post. ",
+                            "date": "4d"
+                         },
+                         "imageSrc2": "~/assets/wk.png"
                     },
                     {
                         "imageSrc": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png",
-                        "desc": "<span><b><font color=\"black\">NativeScript </font></b> <font color=\"black\">shared their first post.</font> <font color=\"#4c4c4c\">5d</font></span>",
-                        "imageSrc2": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"
+                        "desc": {
+                            "name": "NativeScript ",
+                            "content": "shared their first post. ",
+                            "date": "5d"
+                         },
+                         "imageSrc2": "https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"
                     }
                 ]
             },
@@ -240,13 +278,21 @@
                 "notify_list": [
                     {
                         "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/22/52/wolf-3818343__480.jpg",
-                        "desc": "<span><b><font color=\"black\">William, and Pavlo</font></b> <font color=\"black\">shared 20 photos.</font> <font color=\"#4c4c4c\">1w</font></span>",
-                        "imageSrc2": ""
+                        "desc": {
+                            "name": "William, and Pavlo ",
+                            "content": "shared 20 photos. ",
+                            "date": "1w"
+                         },
+                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371__480.jpg",
-                        "desc": "<span><b><font color=\"black\">Pavlo, and kumaran</font></b> <font color=\"black\">shared 10 photos.</font> <font color=\"#4c4c4c\">3w</font></span>",
-                        "imageSrc2": ""
+                        "desc": {
+                            "name": "Pavlo, and kumaran ",
+                            "content": "shared 10 photos. ",
+                            "date": "3w"
+                         },
+                         "imageSrc2": ""
                     }
                 ]
             },
@@ -255,22 +301,33 @@
                 "notify_list": [
                     {
                         "imageSrc": "~/assets/face4.jpg",
-                        "desc": "<span><b><font color=\"black\">Kumaran</font></b> <font color=\"black\">started following you.</font> <font color=\"#4c4c4c\">5w</font></span>",
-                        "imageSrc2": ""
+                        "desc": {
+                            "name": "Kumaran ",
+                            "content": "started following you. ",
+                            "date": "5w"
+                         },
+                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "~/assets/face3.jpg",
-                        "desc": "<span><b><font color=\"black\">Pavlo</font></b> <font color=\"black\">started following you.</font> <font color=\"#4c4c4c\">8w</font></span>",
-                        "imageSrc2": ""
+                        "desc": {
+                            "name": "Pavlo ",
+                            "content": "started following you. ",
+                            "date": "8w"
+                         },
+                         "imageSrc2": ""
                     },
                     {
                         "imageSrc": "~/assets/face1.jpg",
-                        "desc": "<span><b><font color=\"black\">William</font></b> <font color=\"black\">started following you.</font> <font color=\"#4c4c4c\">14w</font></span>",
-                        "imageSrc2": ""
+                        "desc": {
+                            "name": "William ",
+                            "content": "started following you. ",
+                            "date": "14w"
+                         },
+                         "imageSrc2": ""
                     }
                 ]
             }
-        ],
-        "profile": []
+        ]
     }
 }
